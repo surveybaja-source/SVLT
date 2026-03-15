@@ -33,9 +33,10 @@ export default function AuthPage() {
       <div style={{background:'#132030',border:'1px solid #1e3a52',borderRadius:12,padding:32,width:380}}>
         <h2 style={{color:'#fff',fontFamily:'sans-serif',marginBottom:24}}>SurveyLink</h2>
         {error && <p style={{color:'#dd2e1e',fontSize:13,marginBottom:12}}>{error}</p>}
-        <input placeholder="Email" value={email} onChange={e=>setEmail(e.target.value)}
-          style={{width:'100%',background:'#0f1e2e',border:'1px solid #1e3a52',borderRadius:6,padding:'10px 14px',color:'#fff',marginBottom:12,boxSizing:'border-box'}}/>
-        <input type="password" placeholder="Mot de passe" value={password} onChange={e=>setPassword(e.target.value)}
+        <input id="email" name="email" placeholder="Email" value={email} onChange={e=>setEmail(e.target.value)}
+  style={{width:'100%',background:'#0f1e2e',border:'1px solid #1e3a52',borderRadius:6,padding:'10px 14px',color:'#fff',marginBottom:12,boxSizing:'border-box'}}/>
+<input id="password" name="password" type="password" placeholder="Mot de passe" value={password} onChange={e=>setPassword(e.target.value)}
+  style={{width:'100%',background:'#0f1e2e',border:'1px solid #1e3a52',borderRadius:6,padding:'10px 14px',color:'#fff',marginBottom:16,boxSizing:'border-box'}}/>
           style={{width:'100%',background:'#0f1e2e',border:'1px solid #1e3a52',borderRadius:6,padding:'10px 14px',color:'#fff',marginBottom:16,boxSizing:'border-box'}}/>
         <button onClick={handleLogin} disabled={loading}
           style={{width:'100%',background:'#dd2e1e',color:'#fff',border:'none',borderRadius:7,padding:'11px',marginBottom:8,cursor:'pointer',fontWeight:700}}>
