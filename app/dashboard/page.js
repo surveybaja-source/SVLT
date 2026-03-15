@@ -22,6 +22,7 @@ export default function Dashboard() {
         .eq('id', user.id)
         .single()
       if (profile) setRole(profile.role)
+else setRole('insurer')
     }
     getUser()
   }, [])
